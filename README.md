@@ -1,8 +1,8 @@
-### PENEJLASAN PROJEK E-LEARNING INPUT CONTROL
+# PENEJLASAN PROJEK E-LEARNING INPUT CONTROL
 ## 1. DateTime (Pemilih Tanggal)
 Fungsi untuk memilih tanggal menggunakan DatePickerDialog telah diimplementasikan dalam method showDatePicker(). Berikut penjelasannya:
 
-# Kode yang digunakan:
+### Kode yang digunakan:
 
 private fun showDatePicker() {
     val calendar = Calendar.getInstance()
@@ -19,7 +19,7 @@ private fun showDatePicker() {
     datePickerDialog.show()
 }
 
-# Penjelasan:
+### Penjelasan:
 a. DatePickerDialog: Sebuah dialog yang memungkinkan pengguna untuk memilih tanggal.
 b. Parameter pertama adalah konteks (this), yang merujuk ke aktivitas saat ini.
 c. Parameter kedua adalah DatePickerDialog.OnDateSetListener, yang akan dipanggil ketika pengguna memilih tanggal.
@@ -30,7 +30,7 @@ e. Setelah pengguna memilih tanggal, tanggal yang dipilih akan ditampilkan di Te
 ## 2. Alert (Dialog Konfirmasi)
 Fungsi untuk menampilkan dialog konfirmasi menggunakan AlertDialog.Builder. Dialog ini memiliki dua tombol: "Yes" dan "No".
 
-# Kode yang digunakan:
+### Kode yang digunakan:
 
 private fun showAlertDialog() {
     val builder = AlertDialog.Builder(this)
@@ -45,7 +45,7 @@ private fun showAlertDialog() {
     builder.show()
 }
 
-# Penjelasan:
+### Penjelasan:
 a. AlertDialog.Builder: Digunakan untuk membangun dan menampilkan dialog konfirmasi.
 b. setTitle(): Menetapkan judul dialog.
 c. setMessage(): Menetapkan pesan dalam dialog.
@@ -56,7 +56,7 @@ e. builder.show(): Menampilkan dialog di layar.
 ## 3. Toast (Pesan Singkat)
 Fungsi untuk menampilkan pesan singkat menggunakan Toast agar memberi umpan balik kepada pengguna.
 
-# Kode yang digunakan:
+### Kode yang digunakan:
 
 btnShowToast.setOnClickListener {
     val phone = etPhone.text.toString()
@@ -67,7 +67,7 @@ btnShowToast.setOnClickListener {
     }
 }
 
-# Penjelasan:
+### Penjelasan:
 a. Toast.makeText(): Membuat dan menampilkan pesan Toast.
 b. Parameter pertama adalah konteks (this), yang merujuk ke aktivitas saat ini.
 c. Parameter kedua adalah pesan yang akan ditampilkan.
@@ -78,7 +78,7 @@ e. Di dalam kode ini, aplikasi memeriksa apakah input nomor telepon kosong atau 
 ## 4. Input Nomor Telepon
 Fungsi untuk mengizinkan pengguna memasukkan nomor telepon di dalam EditText dan menampilkan nomor yang dimasukkan dalam sebuah Toast.
 
-# Kode yang digunakan:
+### Kode yang digunakan:
 
 etPhone = findViewById(R.id.etPhone)
 btnShowToast.setOnClickListener {
@@ -90,7 +90,7 @@ btnShowToast.setOnClickListener {
     }
 }
 
-# Penjelasan:
+### Penjelasan:
 a. findViewById(R.id.etPhone): Menghubungkan EditText dengan kode, sehingga pengguna dapat memasukkan nomor telepon.
 b. etPhone.text.toString(): Mengambil teks yang dimasukkan di EditText sebagai string.
 c. if (phone.isNotBlank()): Mengecek apakah pengguna telah memasukkan nomor telepon atau tidak.
