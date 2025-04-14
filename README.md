@@ -4,10 +4,11 @@ Fungsi untuk memilih tanggal menggunakan DatePickerDialog telah diimplementasika
 
 ### Kode yang digunakan:
 
-<p>private fun showDatePicker() {
-    val calendar = Calendar.getInstance()
-    val datePickerDialog = DatePickerDialog(
-        this,
+<ul>
+    <li>private fun showDatePicker() {</li>
+    <li>val calendar = Calendar.getInstance()</li>
+    <li>val datePickerDialog = DatePickerDialog(</li>
+        <li>this,</li>
         { _, year, month, dayOfMonth ->
             val selectedDate = "$dayOfMonth/${month + 1}/$year"
             tvResult.text = getString(R.string.label_selected_date, selectedDate)
