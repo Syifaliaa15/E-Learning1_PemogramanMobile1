@@ -23,10 +23,92 @@ private fun showDatePicker() {
 }
 ```
 ### penjelasan
-<ul>DatePickerDialog: Sebuah dialog yang memungkinkan pengguna untuk memilih tanggal.
-<li>o	Parameter pertama adalah konteks (this), yang merujuk ke aktivitas saat ini.</li>
-<li>o	Parameter kedua adalah DatePickerDialog.OnDateSetListener, yang akan dipanggil ketika pengguna memilih tanggal.</li>
-<li>o	calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), dan calendar.get(Calendar.DAY_OF_MONTH) digunakan untuk menetapkan nilai default berdasarkan tanggal saat ini.</li>
-<li>Setelah pengguna memilih tanggal, tanggal yang dipilih akan ditampilkan di TextView (tvResult) dengan format dd/MM/yyyy</li>
+DatePickerDialog: Sebuah dialog yang memungkinkan pengguna untuk memilih tanggal.
+<li>	Parameter pertama adalah konteks (this), yang merujuk ke aktivitas saat ini.</li>
+<li>	Parameter kedua adalah DatePickerDialog.OnDateSetListener, yang akan dipanggil ketika pengguna memilih tanggal.</li>
+<li>	calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), dan calendar.get(Calendar.DAY_OF_MONTH) digunakan untuk menetapkan nilai default berdasarkan tanggal saat ini.</li>
+<li>Setelah pengguna memilih tanggal, tanggal yang dipilih akan ditampilkan di TextView (tvResult) dengan format dd/MM/yyyy
+</li>
+
+## 2. Alert (Dialog Konfirmasi)
+
+Fungsi untuk menampilkan dialog konfirmasi menggunakan AlertDialog.Builder. Dialog ini memiliki dua tombol: "Yes" dan "No".
+
+### Kode yang digunakan:
+
+```kotlin
+private fun showAlertDialog() {
+    val builder = AlertDialog.Builder(this)
+    builder.setTitle(getString(R.string.alert_title))
+    builder.setMessage(getString(R.string.alert_message))
+    builder.setPositiveButton(getString(R.string.alert_yes)) { _, _ ->
+        Toast.makeText(this, getString(R.string.toast_yes), Toast.LENGTH_SHORT).show()
+    }
+    builder.setNegativeButton(getString(R.string.alert_no)) { _, _ ->
+        Toast.makeText(this, getString(R.string.toast_no), Toast.LENGTH_SHORT).show()
+    }
+    builder.show()
+}
+```
+
+### Penjelasan:
+AlertDialog.Builder: Digunakan untuk membangun dan menampilkan dialog konfirmasi.
+<li>	setTitle(): Menetapkan judul dialog.</li>
+<li>	setMessage(): Menetapkan pesan dalam dialog.</li>
+<li>	setPositiveButton() dan setNegativeButton(): Menetapkan dua tombol di dialog (Yes dan No). Masing-masing tombol memiliki aksi yang akan dilakukan ketika diklik. Dalam hal ini, sebuah Toast ditampilkan sebagai umpan balik, sesuai dengan pilihan pengguna.</li>
+<li>	builder.show(): Menampilkan dialog di layar.</li>
+
+## 3. Toast (Pesan Singkat)
+
+Fungsi untuk menampilkan pesan singkat menggunakan Toast agar memberi umpan balik kepada pengguna.
+
+### Kode yang digunakan:
+
+```kotlin
+btnShowToast.setOnClickListener {
+    val phone = etPhone.text.toString()
+    if (phone.isNotBlank()) {
+        Toast.makeText(this, getString(R.string.toast_phone, phone), Toast.LENGTH_SHORT).show()
+    } else {
+        Toast.makeText(this, getString(R.string.toast_enter_phone), Toast.LENGTH_SHORT).show()
+    }
+}
+```
+
+### Penjelasan:
+Toast.makeText(): Membuat dan menampilkan pesan Toast.
+<li>	Parameter pertama adalah konteks (this), yang merujuk ke aktivitas saat ini.</li>
+<li>	Parameter kedua adalah pesan yang akan ditampilkan.</li>
+<li>	Parameter ketiga adalah durasi tampilnya toast, yang dalam hal ini adalah Toast.LENGTH_SHORT (durasi singkat).</li>
+<li>	Di dalam kode ini, aplikasi memeriksa apakah input nomor telepon kosong atau tidak. Jika tidak kosong, aplikasi akan menampilkan toast dengan nomor telepon yang dimasukkan. Jika kosong, aplikasi akan menampilkan pesan yang meminta pengguna untuk mengisi nomor telepon.</li>
+
+## 4. Input Nomor Telepon
+
+Fungsi untuk mengizinkan pengguna memasukkan nomor telepon di dalam EditText dan menampilkan nomor yang dimasukkan dalam sebuah Toast.
+
+### Kode yang digunakan:
+
+```kotlin
+etPhone = findViewById(R.id.etPhone)
+btnShowToast.setOnClickListener {
+    val phone = etPhone.text.toString()
+    if (phone.isNotBlank()) {
+        Toast.makeText(this, getString(R.string.toast_phone, phone), Toast.LENGTH_SHORT).show()
+    } else {
+        Toast.makeText(this, getString(R.string.toast_enter_phone), Toast.LENGTH_SHORT).show()
+    }
+}
+```
+
+### Penjelasan:
+<li>	findViewById(R.id.etPhone): Menghubungkan EditText dengan kode, sehingga pengguna dapat memasukkan nomor telepon.</li>
+<li>	etPhone.text.toString(): Mengambil teks yang dimasukkan di EditText sebagai string.</li>
+<li>	if (phone.isNotBlank()): Mengecek apakah pengguna telah memasukkan nomor telepon atau tidak.</li>
+<ul>
+   <li>    	Jika nomor telepon ada, aplikasi menampilkan Toast yang menunjukkan nomor telepon yang dimasukkan</li> 
 </ul>
+<ul
+    ><li>    	Jika nomor telepon kosong, aplikasi menampilkan Toast yang meminta pengguna untuk memasukkan nomor telepon.</li></ul>
+
+
 
