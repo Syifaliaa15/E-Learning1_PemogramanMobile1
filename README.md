@@ -1,14 +1,15 @@
-# PENEJLASAN PROJEK E-LEARNING INPUT CONTROL
+# Penjelasan Projek E-Learning Input Control
+
 ## 1. DateTime (Pemilih Tanggal)
-Fungsi untuk memilih tanggal menggunakan DatePickerDialog telah diimplementasikan dalam method showDatePicker(). Berikut penjelasannya:
+Fungsi untuk memilih tanggal menggunakan DatePickerDialog telah diimplementasikan dalam method `showDatePicker()`. Berikut penjelasannya:
 
 ### Kode yang digunakan:
 
-<ul>
-    <li>private fun showDatePicker() {</li>
-    <li>val calendar = Calendar.getInstance()</li>
-    <li>val datePickerDialog = DatePickerDialog(</li>
-        <li>this,</li>
+```kotlin
+private fun showDatePicker() {
+    val calendar = Calendar.getInstance()
+    val datePickerDialog = DatePickerDialog(
+        this,
         { _, year, month, dayOfMonth ->
             val selectedDate = "$dayOfMonth/${month + 1}/$year"
             tvResult.text = getString(R.string.label_selected_date, selectedDate)
@@ -18,7 +19,7 @@ Fungsi untuk memilih tanggal menggunakan DatePickerDialog telah diimplementasika
         calendar.get(Calendar.DAY_OF_MONTH)
     )
     datePickerDialog.show()
-}</p>
+}
 
 ### Penjelasan:
 <p>a. DatePickerDialog: Sebuah dialog yang memungkinkan pengguna untuk memilih tanggal.
