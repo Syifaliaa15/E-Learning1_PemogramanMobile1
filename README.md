@@ -4,7 +4,7 @@ Fungsi untuk memilih tanggal menggunakan DatePickerDialog telah diimplementasika
 
 ### Kode yang digunakan:
 
-private fun showDatePicker() {
+<p>private fun showDatePicker() {
     val calendar = Calendar.getInstance()
     val datePickerDialog = DatePickerDialog(
         this,
@@ -17,14 +17,14 @@ private fun showDatePicker() {
         calendar.get(Calendar.DAY_OF_MONTH)
     )
     datePickerDialog.show()
-}
+}</p>
 
 ### Penjelasan:
-a. DatePickerDialog: Sebuah dialog yang memungkinkan pengguna untuk memilih tanggal.
+<p>a. DatePickerDialog: Sebuah dialog yang memungkinkan pengguna untuk memilih tanggal.
 b. Parameter pertama adalah konteks (this), yang merujuk ke aktivitas saat ini.
 c. Parameter kedua adalah DatePickerDialog.OnDateSetListener, yang akan dipanggil ketika pengguna memilih tanggal.
 d. calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), dan calendar.get(Calendar.DAY_OF_MONTH) digunakan untuk menetapkan nilai default berdasarkan tanggal saat ini.
-e. Setelah pengguna memilih tanggal, tanggal yang dipilih akan ditampilkan di TextView (tvResult) dengan format dd/MM/yyyy.
+e. Setelah pengguna memilih tanggal, tanggal yang dipilih akan ditampilkan di TextView (tvResult) dengan format dd/MM/yyyy.</p>
 
 
 ## 2. Alert (Dialog Konfirmasi)
