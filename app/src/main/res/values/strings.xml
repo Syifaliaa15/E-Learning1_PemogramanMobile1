@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">PM1_E-Learning_Syifa</string>
+
+    <string name="App_name">DateTime Alert Toast Input</string>
+
+    <!-- Input no -->
+    <string name="hint_phone">Enter Phone Number</string>
+
+    <!-- Button labels -->
+    <string name="btn_pick_date">Pick Date</string>
+    <string name="btn_show_alert">Show Alert</string>
+    <string name="btn_show_toast">Show Toast</string>
+
+    <!-- Alert -->
+    <string name="alert_title">Confirm</string>
+    <string name="alert_message">Do you want to continue?</string>
+    <string name="alert_yes">Yes</string>
+    <string name="alert_no">No</string>
+
+    <!-- Toast messages -->
+    <string name="toast_enter_phone">Please enter a phone number</string>
+    <string name="toast_phone">Phone: %1$s</string>
+    <string name="toast_yes">You clicked YES</string>
+    <string name="toast_no">You clicked NO</string>
+
+    <!-- TextView result -->
+    <string name="label_result">Result will show here</string>
+    <string name="label_selected_date">Selected Date: %1$s</string>
+</resources>
