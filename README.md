@@ -19,15 +19,16 @@ private fun showDatePicker() {
         calendar.get(Calendar.DAY_OF_MONTH)
     )
     datePickerDialog.show()
-}
+}```
 
 ### Penjelasan:
-<p>a. DatePickerDialog: Sebuah dialog yang memungkinkan pengguna untuk memilih tanggal.
-b. Parameter pertama adalah konteks (this), yang merujuk ke aktivitas saat ini.
-c. Parameter kedua adalah DatePickerDialog.OnDateSetListener, yang akan dipanggil ketika pengguna memilih tanggal.
-d. calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), dan calendar.get(Calendar.DAY_OF_MONTH) digunakan untuk menetapkan nilai default berdasarkan tanggal saat ini.
-e. Setelah pengguna memilih tanggal, tanggal yang dipilih akan ditampilkan di TextView (tvResult) dengan format dd/MM/yyyy.</p>
-
+<ul>
+<li>DatePickerDialog: Sebuah dialog yang memungkinkan pengguna untuk memilih tanggal.</li>
+<li>Parameter pertama adalah konteks (this), yang merujuk ke aktivitas saat ini.</li>
+<li>Parameter kedua adalah DatePickerDialog.OnDateSetListener, yang akan dipanggil ketika pengguna memilih tanggal.</li>
+<li>calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), dan calendar.get(Calendar.DAY_OF_MONTH) digunakan untuk menetapkan nilai default berdasarkan tanggal saat ini.
+<li>Setelah pengguna memilih tanggal, tanggal yang dipilih akan ditampilkan di TextView (tvResult) dengan format dd/MM/yyyy.</li>
+</ul>
 
 ## 2. Alert (Dialog Konfirmasi)
 Fungsi untuk menampilkan dialog konfirmasi menggunakan AlertDialog.Builder. Dialog ini memiliki dua tombol: "Yes" dan "No".
